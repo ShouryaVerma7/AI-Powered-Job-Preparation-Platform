@@ -15,8 +15,6 @@ import { errorHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
 
-console.log("ENV FILE LOADED");
-console.log("GROQ_API_KEY =", process.env.GROQ_API_KEY);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,6 +37,13 @@ app.use(morgan('dev'));
 
 // Static files for uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "CareerPilot Backend Running 🚀"
+  });
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
