@@ -26,9 +26,10 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? ['https://your-frontend.vercel.app']
-    : ['http://localhost:5173', 'http://localhost:3000'],
+  origin: [
+  'http://localhost:5173',
+  'https://ai-powered-job-preparation-platform-flame.vercel.app'
+],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
