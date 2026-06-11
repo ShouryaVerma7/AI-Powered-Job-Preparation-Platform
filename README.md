@@ -186,7 +186,7 @@ Groq offers free tier with generous rate limits for Llama 3 70B.
 
 ## 📝 License
 
-MIT © 2025 CareerPilot AI
+MIT © 2026 CareerPilot AI
 
 ---
 
